@@ -29,7 +29,7 @@ Let's make a virtualhost named *example.domain.mine* and let's suppose my websit
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
-If I want to make a secure HTTPS server I will need **2 virtual hosts**: One for http (port 80) and another one for https (port 443). In addition I will need certbot for generating certificates (checkout **link install certbot**).
+If I want to make a secure HTTPS server I will need **2 virtual hosts**: One for http (port 80) and another one for https (port 443). In addition I will need certbot for generating certificates (checkout [**link install certbot**](https://certbot.eff.org/)).
 ##### HTTP 80 rewrite to 443 virtualhost configuration
 ```
 /etc/apache2/sites-available/example80.domain.mine
