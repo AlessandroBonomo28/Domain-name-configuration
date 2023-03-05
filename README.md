@@ -77,6 +77,7 @@ RewriteEngine on
 
 After saving the virtualhosts inside the folder /etc/apache2/sites-available/. You will need to **ensite** them with apache.
 > sudo a2ensite example.domain.mine
+
 > sudo systemctl reload apache2
 
 Now if you type in your browser "example.domain.mine" you will see your website. **Any issues may be caused by cache or the file /etc/hosts**
@@ -86,6 +87,7 @@ In order to add certificate you will have to open certbot
 - Pick your site and apply certificates
 
 - Choose if you want to redirect http -> https
+
 After adding the certificates to your virtualhost, these lines will be added to your site in */etc/apache2/sites-enabled/example.domain.mine*
 ```
 Include /etc/letsencrypt/options-ssl-apache.conf
