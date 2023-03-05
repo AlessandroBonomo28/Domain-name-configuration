@@ -7,6 +7,13 @@ In order to setup a domain name that points to your website you will need the fo
 - certbot for HTTPS certificates
 ### Home server configuration
 I will host my website on my linux server at home. The server runs Apache as webserver and has an IP address.. let's say *192.168.1.11*. I have my website inside the folder */var/www/html*. At the moment, if I type on any computer in my LAN the address 192.168.1.11 I will see my website. If I want to make it visible outside the LAN I will have to open the port 80 of the router and make it redirect to my server *192.168.1.11*. After the configuration, requests from outside the LAN will be redirected to my website. Now let's make a step further and use domain names instead of IPs.
+```
+# /etc/hosts configuration
+...
+
+192.168.1.11 example.domain.mine
+...
+```
 #### Virtualhosts configuration
 Apache Virtual Hosts allows hosting multiple websites on a single server using a single IP address. Simply put, if you have a single web server but want to host multiple websites, you can use Virtual Hosts to make the web server appear to host multiple independent servers.
 Instead of serving only one website in the default folder */var/www/html/* now I can serve multiple websites.
@@ -98,5 +105,6 @@ Now if you type *http://example.domain.mine* you will be redirected to *https://
 ### Router configuration
 You already forwarded port 80 traffic to your webserver, now you have to specify that the domain name example.domain.mine will be redirected to your webserver. After this configuration you will need one more step to be able to resolve your domain name from outside your LAN.
 ### DNS provider configuration
-In my case the provider is Aruba and I will set a new domain name named *example.domain.mine* that points to my router IP. **Note that your router IP must be static or you will have to configure Dynamic IP update with CloudFlare**. Once you set the domain in the DNS provider panel wait for 15/10 min and then you should be good to go! Remember to clear cache and check the **hosts file of your machine and of the web server**
+In my case the provider is Aruba and I will set a new domain name named *example.domain.mine* that points to my router IP. **Note that your router IP must be static or you will have to configure Dynamic IP update with CloudFlare**. Once you set the domain in the DNS provider panel wait for 15/10 min and then you should be good to go! Remember to **clear cache and check the hosts file of your browsing machine**
+
 
