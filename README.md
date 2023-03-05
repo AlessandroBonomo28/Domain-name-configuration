@@ -7,6 +7,19 @@ In order to setup a domain name that points to your website you will need the fo
 - certbot for HTTPS certificates
 ### Home server configuration
 I will host my website on my linux server at home. The server runs Apache as webserver and has an IP address.. let's say *192.168.1.11*. I have my website inside the folder */var/www/html*. At the moment, if I type on any computer in my LAN the address 192.168.1.11 I will see my website. If I want to make it visible outside the LAN I will have to open the port 80 of the router and make it redirect to my server *192.168.1.11*. After the configuration, requests from outside the LAN will be redirected to my website. Now let's make a step further and use domain names instead of IPs.
+### The hosts file
+The "hosts" file is a configuration file used by the operating system to associate domain names with IP addresses. In other words, the hosts file is a way for the operating system to resolve domain names into IP addresses.
+
+Typically, when you enter a domain name in a web browser, the browser sends a DNS request to find the IP address associated with that domain name. However, if the domain name is listed in the computer's hosts file, the operating system will use the IP address specified in the hosts file instead of sending a DNS request.
+
+The hosts file can be used for various purposes, including:
+
+- Testing a website before making it public, by associating a fake domain name with a local IP address.
+- Blocking access to a specific website, by associating the domain name with an invalid IP address.
+- Allowing access to a website that would otherwise be blocked by a firewall or DNS filter, by associating the domain name with an IP address that is not blocked.
+
+In summary, the hosts file is a useful tool for local domain name resolution, and can be used for various practical purposes.
+If you want the domain *example.domain.mine* to be redirected to 192.168.1.11 It should be configured like this
 ```
 # /etc/hosts configuration
 ...
