@@ -120,4 +120,5 @@ You already forwarded port 80 traffic to your webserver, now you have to specify
 ### DNS provider configuration
 In my case the provider is Aruba and I will set a new domain name named *example.domain.mine* that points to my router IP. **Note that your router IP must be static or you will have to configure Dynamic IP update with CloudFlare**. Once you set the domain in the DNS provider panel wait for 15/10 min and then you should be good to go! Remember to **clear cache and check the hosts file of your browsing machine**
 
+![cool_emoji](https://user-images.githubusercontent.com/75626033/222993456-342d1c33-e009-4d7c-883c-8bb027a14604.png)
 
