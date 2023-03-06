@@ -1,5 +1,6 @@
 # Domain-name-configuration
 A Guide on how to setup a domain name that points to your website
+
 ![cool_emoji](https://user-images.githubusercontent.com/75626033/222993456-342d1c33-e009-4d7c-883c-8bb027a14604.png)
 ## What you will need
 In order to setup a domain name that points to your website you will need the following:
@@ -121,6 +122,4 @@ You already forwarded port 80 traffic to your webserver, now you have to specify
 ### DNS provider configuration
 In my case the provider is Aruba and I will set a new domain name named *example.domain.mine* that points to my router IP. **Note that your router IP must be static or you will have to configure Dynamic IP update with CloudFlare**. Once you set the domain in the DNS provider panel wait for 15/10 min and then you should be good to go! Remember to **clear cache and check the hosts file of your browsing machine**
 
-![maxresdefault](https://user-images.githubusercontent.com/75626033/222993541-efd76f0d-2ed0-4492-acf3-f8721a8e4008.jpg)
-
-
+![dns](https://user-images.githubusercontent.com/75626033/222993707-4c2b608b-31fb-484a-b792-2223e4e2bbb9.PNG)
